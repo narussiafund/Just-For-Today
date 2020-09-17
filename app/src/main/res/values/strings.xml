@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Just for today</string>
+    <string name="just_for_today">Just for today</string>
+    <string name="schedule">Schedule</string>
 </resources>
