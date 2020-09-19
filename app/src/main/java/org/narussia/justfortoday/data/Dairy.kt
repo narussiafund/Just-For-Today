@@ -8,5 +8,4 @@ class Dairy {
     var baseText: String? = null
     var dayText: String? = null
     var justForToday: String? = null
-
 }
