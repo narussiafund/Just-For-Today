@@ -5,7 +5,7 @@ class Dairy {
     var day = 0
     var month = 0
     var title: String? = null
-    var basetext: String? = null
-    var daytext: String? = null
+    var basetext: String = ""
+    var daytext: String = ""
     var justfortoday: String? = null
 }

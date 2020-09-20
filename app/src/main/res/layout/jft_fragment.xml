@@ -1,95 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".jft.JFTFragment">
 
-    <TextView
-            android:id="@+id/textDate"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="17 сентября 2020" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/textDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="17 сентября 2020" />
 
 
-    <TextView
-            android:id="@+id/textTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/textBaseText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textDate"
-            app:layout_constraintVertical_chainStyle="spread_inside"
-            tools:text="Идти дальше Пятого Шага" />
+        <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/textBaseText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDate"
+                app:layout_constraintVertical_chainStyle="spread_inside"
+                tools:text="Идти дальше Пятого Шага" />
 
-    <TextView
-            android:id="@+id/textBaseText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@id/textBaseTextReference"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textTitle"
-            tools:text="«Может показаться, что мы сделали уже достаточно, написав о нашем прошлом. Но мы не можем позволить себе эту ошибку»." />
+        <TextView
+                android:id="@+id/textBaseText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@id/textBaseTextReference"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle"
+                tools:text="«Может показаться, что мы сделали уже достаточно, написав о нашем прошлом. Но мы не можем позволить себе эту ошибку»." />
 
+        <TextView
+                android:id="@+id/textBaseTextReference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@id/textDayText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textBaseText"
+                tools:text="Базовый текст, с. 40" />
 
-    <TextView
-            android:id="@+id/textBaseTextReference"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toTopOf="@id/textDayText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.78"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textBaseText"
-            tools:text="Базовый текст, с. 40" />
-
-    <TextView
-            android:id="@+id/textDayText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:textSize="13sp"
-            app:layout_constraintBottom_toTopOf="@id/textJustForToday"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textBaseTextReference"
-            tools:text="Одни из нас не очень-то жаждут прописывать Четвертый Шаг; другие, наоборот, работают над ним, не покладая рук. Спонсор начинает всерьез тревожиться о нас, пока мы снова и снова прописываем свою инвентаризацию. Мы докапываемся до всего, что только может помочь нам понять, почему мы были такими, какими мы были. Нам кажется, что если мы подумаем, напишем и поговорим о своем прошлом, то этого будет достаточно. Мы не прислушиваемся к рекомендациям спонсора о том, чтобы полностью подготовиться к избавлению от наших недостатков или возместить ущерб, который мы причинили. Мы просто пишем еще больше о своих недостатках и с упоением делимся новыми откровениями. Наконец, измученный спонсор отходит от нас в порядке самозащиты.
+        <TextView
+                android:id="@+id/textDayText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="12dp"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@id/textJustForToday"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textBaseTextReference"
+                tools:text="Одни из нас не очень-то жаждут прописывать Четвертый Шаг; другие, наоборот, работают над ним, не покладая рук. Спонсор начинает всерьез тревожиться о нас, пока мы снова и снова прописываем свою инвентаризацию. Мы докапываемся до всего, что только может помочь нам понять, почему мы были такими, какими мы были. Нам кажется, что если мы подумаем, напишем и поговорим о своем прошлом, то этого будет достаточно. Мы не прислушиваемся к рекомендациям спонсора о том, чтобы полностью подготовиться к избавлению от наших недостатков или возместить ущерб, который мы причинили. Мы просто пишем еще больше о своих недостатках и с упоением делимся новыми откровениями. Наконец, измученный спонсор отходит от нас в порядке самозащиты.
 Каким бы экстремальным ни показался подобный сценарий, многие из нас оказываются именно в такой ситуации. Когда мы думали, писали и говорили о своих ошибках, у нас создавалось ощущение, что теперь все находится под контролем. Однако рано или поздно мы поняли, что погрязли в своих проблемах, и решений не видно. Мы узнали, что если хотим начать жить по-другому, то нам придется двигаться дальше Пятого Шага по программе. Мы начали преисполняться готовностью, чтобы Высшая Сила устранила наши недостатки, о которых мы теперь имели прекрасное представление. Мы возместили ущерб, который нанесли из-за дефектов своего характера. И только после всего этого мы начали испытывать настоящую духовную свободу. Мы больше не являемся жертвами; мы можем свободно двигаться вперед в своем выздоровлении." />
 
-    <TextView
-            android:id="@+id/textJustForToday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textDayText"
-            tools:text="ТОЛЬКО СЕГОДНЯ: Сама по себе работа по Четвертому и Пятому Шагам не принесет эмоционального и духовного выздоровления, хотя она, конечно, необходима. Я сделаю эту работу, а потом буду жить по этим Шагам." />
+        <TextView
+                android:id="@+id/textJustForToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDayText"
+                tools:text="ТОЛЬКО СЕГОДНЯ: Сама по себе работа по Четвертому и Пятому Шагам не принесет эмоционального и духовного выздоровления, хотя она, конечно, необходима. Я сделаю эту работу, а потом буду жить по этим Шагам." />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
