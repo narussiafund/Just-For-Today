@@ -17,6 +17,6 @@ class JFTViewModel : ViewModel() {
     }
 
     fun loadDairy() {
-        getDairyCase.getDairy { dairy -> dairyLiveData.value = dairy }
+        getDairyCase.getDairy { dairy -> dairyLiveData.postValue(dairy) }
     }
 }
