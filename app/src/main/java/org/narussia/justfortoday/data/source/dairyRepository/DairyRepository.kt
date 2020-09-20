@@ -7,28 +7,23 @@ import java.util.*
 
 class DairyRepository : IDairyRepository {
 
-    private val dairyUrl = "https://na-russia.org/egednevnik/dairy_json.php"
-    private val cal = Calendar.getInstance()
-
-    override fun getDairy(): Dairy {
-
-        val gson = Gson()
-
+    override fun getDairy(callback: (Dairy) -> Unit) {
         val thread = Thread {
             try {
-                val dairyJSON = URL(getDairyUrl()).readText()
-                val dairy: Dairy = gson.fromJson(dairyJSON, Dairy::class.java)
+                callback(Gson().fromJson(URL(getDairyUrl()).readText(), Dairy::class.java))
             } catch (e: Exception) {
                 println("Exception: $e")
             }
         }
         thread.start()
-        return Dairy()
     }
 
-    fun getDairyUrl(): String? {
-        return (dairyUrl + "?c=android&d=" + cal.get(Calendar.DAY_OF_MONTH)
-                + "&m=" + (cal.get(Calendar.MONTH) + 1))
+    private fun getDairyUrl(): String {
+        val cal = Calendar.getInstance()
+        return "$DAIRY_URL?c=android&d=${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}&m=${cal.get(Calendar.MONTH) + 1}"
+    }
+
+    companion object {
+        const val DAIRY_URL = "https://na-russia.org/egednevnik/dairy_json.php"
     }
 }
-

@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import org.narussia.justfortoday.data.Dairy
 import org.narussia.justfortoday.jft.usecases.GetDairy
 
-
 class JFTViewModel : ViewModel() {
 
     private val dairyLiveData = MutableLiveData<Dairy>()
