@@ -3,7 +3,7 @@ package org.narussia.justfortoday.data.source.dairyRepository
 import com.google.gson.Gson
 import org.narussia.justfortoday.data.Dairy
 import java.net.URL
-import java.util.*
+import java.util.Calendar
 
 class DairyRepository : IDairyRepository {
 
