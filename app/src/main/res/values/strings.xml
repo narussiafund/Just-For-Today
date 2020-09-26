@@ -2,5 +2,5 @@
     <string name="app_name">Just for today</string>
     <string name="just_for_today">Just for today</string>
     <string name="schedule">Schedule</string>
-    <string name="just_for_today_bottom">JUST FOR TODAY: %s</string>
+    <string name="just_for_today_bottom">ТОЛЬКО СЕГОДНЯ: %s</string>
 </resources>
