@@ -31,7 +31,7 @@ class JFTFragment : Fragment() {
         viewModel.loadDairy()
         viewModel.getDairy().observe(this as LifecycleOwner) { dairy ->
             textDate.text = dairy.date
-            textTitle.text = dairy.title
+            textTitle.text = dairy.title.fromHtml()
             textDayText.text = dairy.daytext.fromHtml()
             textBaseText.text = dairy.basetext.substringBefore('<', "").fromHtml()
             textBaseTextReference.text = dairy.basetext.substringAfter('>', "").fromHtml()
