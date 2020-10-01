@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import java.util.*
 
-interface dairyRetrofitInterface {
+interface IDairyRetrofitInterface {
     val cal: Calendar
         get() = Calendar.getInstance()
 

@@ -4,7 +4,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object dairyBuilder {
+object DairyBuilder {
 
 
     private val client = OkHttpClient.Builder().build()
