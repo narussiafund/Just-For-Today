@@ -21,5 +21,3 @@ interface IDairyAPI {
         private const val MONTH = "m"
     }
 }
-
-

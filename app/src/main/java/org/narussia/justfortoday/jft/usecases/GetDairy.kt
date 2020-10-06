@@ -23,7 +23,6 @@ class GetDairy {
                 callback(dairy)
             }
         }.start()
-
     }
 
     companion object {

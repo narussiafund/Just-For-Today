@@ -33,6 +33,4 @@ class RemoteDairyRepository : IRemoteDairyRepository {
     companion object {
         private const val PLATFORM = "android"
     }
-
-
 }
