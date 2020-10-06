@@ -13,14 +13,16 @@ class GetDairy {
     private val locale = Locale(LOCALE_LANGUAGE, LOCALE_COUNTRY)
 
     fun getDairy(callback: (Dairy) -> Unit) {
-        dairyRepository.getDairy { dairy ->
-            val calendar = Calendar.getInstance().apply {
-                set(Calendar.DAY_OF_MONTH, dairy.day)
-                set(Calendar.MONTH, dairy.month)
+        Thread {
+            dairyRepository.getDairy { dairy ->
+                val calendar = Calendar.getInstance().apply {
+                    set(Calendar.DAY_OF_MONTH, dairy.day)
+                    set(Calendar.MONTH, dairy.month)
+                }
+                dairy.date = SimpleDateFormat(DATE_FORMAT, locale).format(calendar.time)
+                callback(dairy)
             }
-            dairy.date = SimpleDateFormat(DATE_FORMAT, locale).format(calendar.time)
-            callback(dairy)
-        }
+        }.start()
     }
 
     companion object {

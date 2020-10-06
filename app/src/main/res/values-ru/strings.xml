@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Just for today</string>
+    <string name="just_for_today">Только сегодня</string>
+    <string name="schedule">Расписание</string>
+    <string name="just_for_today_bottom">ТОЛЬКО СЕГОДНЯ: %s</string>
+</resources>
