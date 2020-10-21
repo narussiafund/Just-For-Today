@@ -27,6 +27,4 @@ abstract class DairyDatabase : RoomDatabase() {
             INSTANCE = null
         }
     }
-
-
 }
