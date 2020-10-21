@@ -1,6 +1,11 @@
 package org.narussia.justfortoday.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 class Dairy {
+    @PrimaryKey
     var date: String = ""
     var day = 0
     var month = 0
