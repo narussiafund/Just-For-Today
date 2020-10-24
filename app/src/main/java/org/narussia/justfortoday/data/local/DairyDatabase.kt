@@ -9,10 +9,12 @@ import org.narussia.justfortoday.data.Dairy
 @Database(entities = [Dairy::class], version = 1)
 abstract class DairyDatabase : RoomDatabase() {
 
-    abstract fun DairyDao(): DairyDao
+    abstract fun dairyDao(): DairyDao
 
     companion object {
-        var INSTANCE: DairyDatabase? = null
+
+        @Volatile
+        private var INSTANCE: DairyDatabase? = null
 
         fun getDairyDatabase(context: Context): DairyDatabase? {
             if (INSTANCE == null) {

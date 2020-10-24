@@ -1,5 +1,6 @@
 package org.narussia.justfortoday.data.local
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -20,5 +21,5 @@ interface DairyDao {
     fun updateDairy(Dairy: Dairy)
 
     @Query("SELECT * FROM Dairy WHERE date == :date")
-    fun getDairyByDate(date: String): Dairy
+    fun getDairyByDate(date: String): LiveData<Dairy>
 }
