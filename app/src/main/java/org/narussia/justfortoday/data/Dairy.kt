@@ -1,11 +1,24 @@
 package org.narussia.justfortoday.data
 
-class Dairy {
-    var date: String = ""
-    var day = 0
-    var month = 0
-    var title: String = ""
-    var basetext: String = ""
-    var daytext: String = ""
-    var justfortoday: String = ""
-}
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class Dairy(
+    @PrimaryKey
+    @ColumnInfo(name = "date")
+    var date: String,
+    @ColumnInfo(name = "day")
+    var day: Int,
+    @ColumnInfo(name = "month")
+    var month: Int,
+    @ColumnInfo(name = "title")
+    var title: String,
+    @ColumnInfo(name = "basetext")
+    var basetext: String,
+    @ColumnInfo(name = "daytext")
+    var daytext: String,
+    @ColumnInfo(name = "justfortoday")
+    var justfortoday: String
+)
