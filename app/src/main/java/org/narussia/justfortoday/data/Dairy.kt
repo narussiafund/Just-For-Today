@@ -5,20 +5,20 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class Dairy {
+data class Dairy(
     @PrimaryKey
     @ColumnInfo(name = "date")
-    var date: String = "01.01"
+    val date: String,
     @ColumnInfo(name = "day")
-    var day = 0
+    var day: Int,
     @ColumnInfo(name = "month")
-    var month = 0
+    var month: Int,
     @ColumnInfo(name = "title")
-    var title: String = ""
+    var title: String,
     @ColumnInfo(name = "basetext")
-    var basetext: String = ""
+    var basetext: String,
     @ColumnInfo(name = "daytext")
-    var daytext: String = ""
+    var daytext: String,
     @ColumnInfo(name = "justfortoday")
-    var justfortoday: String = ""
-}
+    var justfortoday: String
+)
