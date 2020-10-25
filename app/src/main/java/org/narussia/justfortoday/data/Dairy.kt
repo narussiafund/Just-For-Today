@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Dairy(
     @PrimaryKey
     @ColumnInfo(name = "date")
-    val date: String,
+    var date: String,
     @ColumnInfo(name = "day")
     var day: Int,
     @ColumnInfo(name = "month")

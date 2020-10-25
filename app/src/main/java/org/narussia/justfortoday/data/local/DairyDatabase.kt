@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import org.narussia.justfortoday.data.Dairy
 
-@Database(entities = [Dairy::class], version = 1)
+@Database(entities = [Dairy::class], version = 2)
 abstract class DairyDatabase : RoomDatabase() {
 
     abstract fun dairyDao(): DairyDao
