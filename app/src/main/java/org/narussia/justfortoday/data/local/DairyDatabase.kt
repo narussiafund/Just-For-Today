@@ -16,14 +16,8 @@ abstract class DairyDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: DairyDatabase? = null
 
-        fun getDairyDatabase(context: Context): DairyDatabase? {
-            if (INSTANCE == null) {
-                synchronized(DairyDatabase::class) {
-                    INSTANCE = Room.databaseBuilder(context.applicationContext, DairyDatabase::class.java, "database").build()
-                }
-            }
-            return INSTANCE
-        }
+        fun getDairyDatabase(context: Context): DairyDatabase =
+            INSTANCE ?: Room.databaseBuilder(context.applicationContext, DairyDatabase::class.java, "database").build().also { INSTANCE = it }
 
         fun destroyDataBase() {
             INSTANCE = null
