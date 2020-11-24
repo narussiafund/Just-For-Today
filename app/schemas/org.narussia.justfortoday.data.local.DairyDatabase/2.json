@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "603c942d0d0aebcabe2246dedd84c89a",
+    "entities": [
+      {
+        "tableName": "Dairy",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`date` TEXT NOT NULL, `day` INTEGER NOT NULL, `month` INTEGER NOT NULL, `title` TEXT NOT NULL, `basetext` TEXT NOT NULL, `daytext` TEXT NOT NULL, `justfortoday` TEXT NOT NULL, PRIMARY KEY(`date`))",
+        "fields": [
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "day",
+            "columnName": "day",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "month",
+            "columnName": "month",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "basetext",
+            "columnName": "basetext",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "daytext",
+            "columnName": "daytext",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "justfortoday",
+            "columnName": "justfortoday",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "date"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '603c942d0d0aebcabe2246dedd84c89a')"
+    ]
+  }
+}
