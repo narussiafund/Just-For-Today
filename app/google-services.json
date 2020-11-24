@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "859452165984",
+    "firebase_url": "https://just-for-today-c055a.firebaseio.com",
+    "project_id": "just-for-today-c055a",
+    "storage_bucket": "just-for-today-c055a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859452165984:android:133f745d6f1e0dbc205805",
+        "android_client_info": {
+          "package_name": "org.narussia.justfortoday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859452165984-5nnq1mfe6ljg628fda981vj0qhp8cggt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS7yQFYYCXgonabgrZNdp1wbqWbQI1_Bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859452165984-5nnq1mfe6ljg628fda981vj0qhp8cggt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
